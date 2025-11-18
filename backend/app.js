@@ -10,6 +10,6 @@ app.use(cors());
 app.use(morgan('dev'));
 
 
-mongoDbInit().then(() => console.log('Connected to MongoDB'));
+// mongoDbInit().then(() => console.log('Connected to MongoDB'));
 
 module.exports = app;
