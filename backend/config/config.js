@@ -1,25 +1,12 @@
-require('dotenv').config({ quiet: true });
+require('dotenv').config();
 
 module.exports = {
   development: {
-    username: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    host: process.env.DB_HOST,
-    dialect: process.env.DB_DIALECT || 'mysql'
-  },
-  test: {
-    username: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    host: process.env.DB_HOST,
-    dialect: process.env.DB_DIALECT || 'mysql'
-  },
-  production: {
-    username: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    host: process.env.DB_HOST,      // ← important
-    dialect: process.env.DB_DIALECT || 'mysql'
+    username: process.env.DB_USER || "root",
+    password: process.env.DB_PASSWORD || "pass123",
+    database: process.env.DB_NAME || "ecommerce",
+    host: process.env.DB_HOST || "mysql",
+    port: process.env.DB_PORT || 3306,
+    dialect: "mysql"
   }
 };
