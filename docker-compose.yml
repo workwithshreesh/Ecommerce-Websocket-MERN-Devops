@@ -20,7 +20,7 @@ services:
       retries: 10
 
   node_app:
-    build: ./backend
+    image: fakemy/ecommerce-node_app:1.0.0
     container_name: node_app
     restart: always
     ports:
